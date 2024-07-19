@@ -6,9 +6,9 @@ services:
     environment:
       NO_CORS: 1
       #IPADDRESS: z8gksks.cardozo.com.ar
-    #ports:
-    #  - "8080:8080"
-    #  - "11470:11470" # Just one of the two should be enough
-    #  - "12470:12470"
+    ports:
+      - "8080:8080"
+      - "11470:11470" # Just one of the two should be enough
+      - "12470:12470"
     #volumes:
       #- "/srv/config/stremio/:/root/.stremio-server" # set the first part to your local folder. Its not required though
