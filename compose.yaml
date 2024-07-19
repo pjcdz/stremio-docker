@@ -1,7 +1,9 @@
 version: "3"
 services:
   stremio:
-    image: tsaridas/stremio-docker:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     restart: unless-stopped
     environment:
       NO_CORS: 1
