@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     environment:
       NO_CORS: 1
-      IPADDRESS: netflix.cardozo.com.ar
+      #IPADDRESS: netflix.cardozo.com.ar
     ports:
       - "8080:8080"
       - "11470:11470" # Just one of the two should be enough
