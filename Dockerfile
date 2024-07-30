@@ -8,6 +8,9 @@ RUN apk add --no-cache iptables
 COPY iptables.sh /iptables.sh
 RUN chmod +x /iptables.sh
 
+# Ejecuta el script de iptables antes de iniciar el servicio con permisos de root
+USER root
+
 # Ejecuta el script de iptables antes de iniciar el servicio
 ENTRYPOINT ["/iptables.sh"]
 
