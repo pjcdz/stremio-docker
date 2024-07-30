@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Verifica si el script se está ejecutando como root
+if [ "$(id -u)" -ne 0 ]; then
+  echo "Este script debe ejecutarse como root" 1>&2
+  exit 1
+fi
+
 # Limpiar reglas de iptables existentes
 iptables -F
 iptables -X
